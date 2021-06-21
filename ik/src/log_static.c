@@ -84,6 +84,8 @@ ik_log_static_set_severity(enum ik_log_severity_e severity)
 void
 ik_log_static_message(const char* fmt, ...)
 {
+// DEMEZ: very very lazy workaround
+#if 0
     va_list va;
     uintptr_t msg_len;
 
@@ -113,4 +115,5 @@ ik_log_static_message(const char* fmt, ...)
 
     if (IKAPI.internal.callbacks->on_log_message != NULL)
         IKAPI.internal.callbacks->on_log_message((char*)g_log->message_buffer.data);
+#endif
 }

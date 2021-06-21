@@ -253,6 +253,7 @@ uintptr_t ik_memory_deinit(void) { return 0; }
 void
 mutated_string_and_hex_dump(void* data, intptr_t length_in_bytes)
 {
+#if 0
     char* dump;
     intptr_t i;
 
@@ -278,4 +279,5 @@ mutated_string_and_hex_dump(void* data, intptr_t length_in_bytes)
     printf("\n");
 
     free(dump);
+#endif
 }

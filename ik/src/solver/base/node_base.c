@@ -198,6 +198,7 @@ ik_node_base_duplicate(const struct ik_node_t* node, int copy_attachments)
 static void
 recursively_dump_dot(FILE* fp, struct ik_node_t* node)
 {
+#if 0
     if (node->effector != NULL)
         fprintf(fp, "    %d [color=\"1.0 0.5 1.0\"];\n", node->guid);
 
@@ -205,12 +206,14 @@ recursively_dump_dot(FILE* fp, struct ik_node_t* node)
         fprintf(fp, "    %d -- %d;\n", node->guid, guid);
         recursively_dump_dot(fp, child);
     NODE_END_EACH
+#endif
 }
 
 /* ------------------------------------------------------------------------- */
 void
 ik_node_base_dump_to_dot(struct ik_node_t* node, const char* file_name)
 {
+#if 0
     FILE* fp = fopen(file_name, "w");
     if (fp == NULL)
     {
@@ -223,4 +226,5 @@ ik_node_base_dump_to_dot(struct ik_node_t* node, const char* file_name)
     fprintf(fp, "}\n");
 
     fclose(fp);
+#endif
 }

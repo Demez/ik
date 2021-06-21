@@ -63,7 +63,7 @@ ikret_t
 ik_solver_static_construct(struct ik_solver_t* solver)
 {
     assert("Calling construct() on static interface makes no sense.");
-    return 0;
+    return IK_OK;
 }
 
 /* ------------------------------------------------------------------------- */
