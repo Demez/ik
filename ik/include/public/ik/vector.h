@@ -8,8 +8,7 @@
  * they are able to grow and shrink in size automatically.
  */
 
-#ifndef VECTOR_H
-#define VECTOR_H
+#pragma once
 
 #include "ik/config.h"
 
@@ -302,4 +301,3 @@ vector_get_element(const struct vector_t*, uint32_t index);
 
 C_END
 
-#endif /* VECTOR_H */
